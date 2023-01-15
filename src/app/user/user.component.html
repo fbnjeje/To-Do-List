@@ -1,0 +1,13 @@
+<div class="input">
+    <form action=""[formGroup]="form">
+        <input type="text" placeholder="Ingrese uwu" formControlName = "task">
+        <input type="submit" (click)="add()" value="+">
+    </form>
+</div>
+
+<ul>
+    <li *ngFor="let item of users">
+        {{ item }}
+        <button (click)="delete(item)">x</button>
+    </li>
+</ul>
