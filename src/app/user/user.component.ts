@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
   styleUrls: ["./user.component.scss"]
 })
 export class UserComponent {
-  users: string[] = [];
+  users: string[] = ["pene", "aaa"];
 
   delete(item: string) {
     this.users = this.users.filter(value => value !== item);
@@ -28,9 +28,9 @@ export class UserComponent {
     localStorage.setItem("taskList", JSON.stringify(this.users));
   }
 
-  ngOnInit() {
-    const dataRemind: string | any = localStorage.getItem("taskList");
-    const dataParse = JSON.parse(dataRemind);
-    this.users = dataParse;
-  }
+  // ngOnInit() {
+  //   const dataRemind: string | any = localStorage.getItem("taskList");
+  //   const dataParse = JSON.parse(dataRemind);
+  //   this.users = dataParse;
+  // }
 }
